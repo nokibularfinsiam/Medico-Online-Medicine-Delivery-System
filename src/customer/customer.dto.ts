@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Optional } from "@nestjs/common";
 import { IsEmail, IsInt, IsNotEmpty, IsNumberString, IsString, Matches, MaxLength, MinLength } from "class-validator";
 
@@ -35,3 +36,26 @@ export class loginDTO{
 export class updatePictureDTO{
     filename: string;   
 } 
+=======
+import { IsNotEmpty, IsEmail, Length } from 'class-validator';
+
+export class customerDTO {
+  @IsNotEmpty()
+  name: string;
+
+  @IsNotEmpty()
+  @IsEmail()
+  email: string;
+
+  @IsNotEmpty()
+  @Length(3, 8)
+  password: string;
+
+  @IsNotEmpty()
+  address: string;
+
+  complains: string;
+
+  order: string;
+}
+>>>>>>> f516a931265cabcd796028731a0baa22bb9f3aab
